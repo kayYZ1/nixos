@@ -1,0 +1,17 @@
+{ config, pkgs, ... }:
+
+{
+  imports = [
+	./home/packages/common.nix
+	./home/programs/hyprland.nix
+	./home/programs/waybar.nix
+	./home/programs/git.nix
+	./home/programs/nu.nix
+  ];
+
+  home.username = "kacper";
+  home.homeDirectory = "/home/kacper";
+  home.stateVersion = "25.05";
+
+  programs.home-manager.enable = true;
+}
