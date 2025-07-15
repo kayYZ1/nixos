@@ -1,5 +1,3 @@
-{ config, pkgs, ... }:
-
 {
   wayland.windowManager.hyprland = {
     enable = true;
@@ -9,6 +7,9 @@
       # If your monitor connector is different, use:
       # monitor = "HDMI-A-1,1920x1080@60,0x0,1";
       # To find your monitor name, run: hyprctl monitors
+      exec-once = [
+        "waybar"
+      ];
 
       # Input configuration
       input = {
@@ -65,8 +66,7 @@
         preserve_split = true;
       };
 
-      # Keybindings
-      "$mainMod" = "SUPER";
+      "$mainMod" = "ALT";
 
       bind = [
         "$mainMod, Q, exec, ghostty"

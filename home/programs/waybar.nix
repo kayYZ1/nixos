@@ -1,5 +1,3 @@
-{ config, pkgs, ... }:
-
 let
   catppuccinFlavor = "macchiato";
 in {

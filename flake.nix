@@ -27,7 +27,7 @@
       };
       homeConfigurations.kacper = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
-	modules = [ ./home.nix catppuccin.homeModules.catppuccin ];	
+	modules = [ ./home.nix catppuccin.homeModules.catppuccin ];
       };
     };
 }
