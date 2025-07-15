@@ -3,6 +3,7 @@
 {
   imports = [
 	./home/packages/common.nix
+	./home/packages/development.nix
 	./home/programs/hyprland.nix
 	./home/programs/waybar.nix
 	./home/programs/git.nix
