@@ -21,6 +21,15 @@
               }
             }
            }
+
+           # Custom prompt to show full path with lambda symbol
+           $env.PROMPT_COMMAND = {||
+               $"(ansi green_bold)($env.PWD)(ansi reset) λ "
+           }
+
+           $env.PROMPT_INDICATOR = "λ "
+           $env.PROMPT_INDICATOR_VI_INSERT = "λ "
+           $env.PROMPT_INDICATOR_VI_NORMAL = "λ "
            $env.PATH = ($env.PATH |
            split row (char esep) |
            prepend /home/myuser/.apps |
@@ -35,8 +44,8 @@
                 settings = {
                   add_newline = true;
                   character = {
-                  success_symbol = "[➜](bold green)";
-                  error_symbol = "[➜](bold red)";
+                  success_symbol = "[λ](bold green)";
+                  error_symbol = "[λ](bold red)";
                 };
              };
            };

@@ -94,12 +94,12 @@ in {
       }
 
       #workspaces button:hover {
-        background-color: @surface1;
+        background-color: @surface0;
         border-color: @lavender;
       }
 
       #workspaces button.active {
-        background-color: @lavender;
+        background-color: @surface0;
         border-color: @lavender;
       }
 
@@ -121,7 +121,7 @@ in {
       #pulseaudio, #network, #cpu, #battery {
         background-color: @surface0;
         border-radius: 8px;
-        padding: 6px 6px;
+        padding: 6px 8px;
         margin: 8px 2px;
         transition: all 0.3s ease;
       }
