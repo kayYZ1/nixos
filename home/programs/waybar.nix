@@ -55,7 +55,7 @@ in {
       };
 
       clock = {
-        format = "🕒 {:%H:%M %d/%m/%Y}";
+        format = "{:%H:%M | %d/%m/%Y}";
         tooltip-format = "{:%A, %B %d, %Y}";
       };
     }];
@@ -67,7 +67,8 @@ in {
         border-radius: 0;
         font-family: "JetBrains Mono", monospace;
         font-size: 14px;
-        padding: 0 10px;
+        padding: 8px 12px 8px 12px;
+        min-height: 40px;
       }
 
       * {
@@ -77,16 +78,16 @@ in {
 
       /* Workspaces styling */
       #workspaces {
-        margin: 0 10px;
+        margin: 8px 16px;
         padding: 0;
         background-color: transparent;
       }
 
       #workspaces button {
-        min-width: 18px;
-        min-height: 18px;
+        min-width: 12px;
+        min-height: 12px;
         border-radius: 50%;
-        margin: 0 4px;
+        margin: 0 2px;
         background-color: transparent;
         border: 2px solid @surface1;
         transition: all 0.3s ease;
@@ -111,8 +112,8 @@ in {
       #clock {
         background-color: @surface0;
         border-radius: 8px;
-        padding: 0 15px;
-        margin: 0 10px;
+        padding: 8px 15px;
+        margin: 8px 16px;
         font-weight: 600;
       }
 
@@ -120,8 +121,8 @@ in {
       #pulseaudio, #network, #cpu, #battery {
         background-color: @surface0;
         border-radius: 8px;
-        padding: 0 12px;
-        margin: 0 2px;
+        padding: 6px 6px;
+        margin: 8px 2px;
         transition: all 0.3s ease;
       }
 
