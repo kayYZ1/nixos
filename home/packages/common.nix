@@ -5,5 +5,7 @@
 		brave
 		zed-editor
 		obsidian
+		rofi
+		hyprpaper
 	];
 }

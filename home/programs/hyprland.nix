@@ -1,3 +1,5 @@
+{ pkgs, ...}:
+
 {
   wayland.windowManager.hyprland = {
     enable = true;
@@ -9,6 +11,7 @@
       # To find your monitor name, run: hyprctl monitors
       exec-once = [
         "waybar"
+        "${pkgs.hyprpaper}/bin/hyprpaper -c preload=/home/Downloads/wp.png wallpaper=,/home/Downloads/wp.png"
       ];
 
       # Input configuration
@@ -70,7 +73,7 @@
         "$mainMod, Q, exec, ghostty"
         "$mainMod, C, killactive"
         "$mainMod, M, exit"
-        "$mainMod, R, exec, wofi --show drun"
+        "$mainMod, D, exec, rofi -show drun"
         "$mainMod, V, togglefloating"
         "$mainMod, B, exec, brave"
 
