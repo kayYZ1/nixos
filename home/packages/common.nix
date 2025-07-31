@@ -7,5 +7,6 @@
 		obsidian
 		rofi
 		hyprpaper
+		tmux
 	];
 }

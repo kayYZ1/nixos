@@ -5,13 +5,7 @@
   programs.helix = {
     enable = true;
     package = pkgs.helix; # Use the default Helix package from nixpkgs
-    extraPackages = with pkgs; [
-      clang-tools # Provides clangd for LSP support
-      clang # C/C++ compiler
-      cmake # Build system for C/C++ projects
-    ];
     settings = {
-      theme = "autumn_night_transparent";
       editor = {
         cursor-shape = {
           normal = "block";
@@ -42,15 +36,5 @@
         };
       }
     ];
-    themes = {
-      autumn_night_transparent = {
-        inherits = "autumn_night";
-        "ui.background" = { };
-      };
-    };
   };
-
-  home.packages = with pkgs; [
-    clang-tools # Ensure clangd is available
-  ];
 }
