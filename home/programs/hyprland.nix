@@ -6,14 +6,10 @@
     settings = {
       # Monitor configuration - 1920x1080@60Hz with no scaling
       monitor = "eDP-1,1920x1080@60,0x0,1";
-      # If your monitor connector is different, use:
-      # monitor = "HDMI-A-1,1920x1080@60,0x0,1";
-      # To find your monitor name, run: hyprctl monitors
       exec-once = [
         "waybar"
-        "${pkgs.hyprpaper}/bin/hyprpaper -c preload=/home/Downloads/wp.png wallpaper=,/home/Downloads/wp.png"
+        "${pkgs.swaybg}/bin/swaybg -i /home/kacper/Downloads/wp.png -m fill"
       ];
-
       # Input configuration
       input = {
         kb_layout = "pl";  # Polish keyboard layout

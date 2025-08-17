@@ -8,5 +8,6 @@
 		rofi
 		hyprpaper
 		tmux
+		swaybg
 	];
 }
