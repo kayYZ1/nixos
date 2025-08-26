@@ -1,4 +1,4 @@
-{ pkgs, ...}:
+{ pkgs, ... }:
 
 {
   wayland.windowManager.hyprland = {
@@ -12,7 +12,7 @@
       ];
       # Input configuration
       input = {
-        kb_layout = "pl";  # Polish keyboard layout
+        kb_layout = "pl"; # Polish keyboard layout
         kb_variant = "";
         kb_model = "";
         kb_options = "";
@@ -21,9 +21,7 @@
         follow_mouse = 1;
         sensitivity = 0;
 
-        touchpad = {
-          natural_scroll = false;
-        };
+        touchpad = { natural_scroll = false; };
       };
 
       general = {

@@ -1,5 +1,4 @@
-let
-  catppuccinFlavor = "macchiato";
+let catppuccinFlavor = "macchiato";
 in {
   # New Catppuccin module structure
   catppuccin = {

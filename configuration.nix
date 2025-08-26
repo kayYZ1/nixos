@@ -1,18 +1,17 @@
 { pkgs, ... }:
 
 {
-  imports =
-    [
-      ./hardware/hardware-configuration.nix
-      ./packages/system.nix
-      ./packages/networking.nix
-      ./packages/desktop.nix
-    ];
+  imports = [
+    ./hardware/hardware-configuration.nix
+    ./packages/system.nix
+    ./packages/networking.nix
+    ./packages/desktop.nix
+  ];
 
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  nix.settings.experimental-features = [ "nix-command" "flakes"];
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
   nix = {
     gc = {
       automatic = true;
@@ -32,7 +31,7 @@
     enable = true;
     allowedTCPPorts = [ 22 ];
   };
-  
+
   time.timeZone = "Europe/Warsaw";
 
   i18n.defaultLocale = "en_US.UTF-8";
@@ -57,11 +56,7 @@
     extraGroups = [ "networkmanager" "wheel" ];
   };
 
-  environment.systemPackages = with pkgs; [
-    vim
-    git
-    rsync
-  ];
+  environment.systemPackages = with pkgs; [ vim git rsync ];
 
   powerManagement.enable = true;
   services.tlp.enable = true;

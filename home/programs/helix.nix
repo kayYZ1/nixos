@@ -3,7 +3,7 @@
 {
   programs.helix = {
     enable = true;
-    package = pkgs.helix; # Ensure this is Helix 24.07 or later (available in NixOS 25.05 or unstable)
+    package = pkgs.helix;
     settings = {
       editor = {
         cursor-shape = {
@@ -11,11 +11,17 @@
           insert = "bar";
           select = "underline";
         };
-        auto-format = true; # Enables auto-formatting globally (ensure formatters are defined for all languages)
+        auto-format =
+          true; # Enables auto-formatting globally (ensure formatters are defined for all languages)
         lsp.display-messages = true;
       };
     };
     languages.language = [
+      {
+        name = "nix";
+        auto-format = true;
+        formatter.command = "${pkgs.nixfmt}/bin/nixfmt";
+      }
       {
         name = "cpp";
         auto-format = true;
@@ -81,7 +87,8 @@
     ];
     languages.language-server = {
       typescript-language-server = {
-        command = "${pkgs.nodePackages.typescript-language-server}/bin/typescript-language-server";
+        command =
+          "${pkgs.nodePackages.typescript-language-server}/bin/typescript-language-server";
         args = [ "--stdio" ];
       };
     };
