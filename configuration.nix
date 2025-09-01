@@ -25,6 +25,20 @@
   };
   nixpkgs.config.allowUnfree = true;
 
+  hardware.graphics.enable = true;
+  hardware.enableRedistributableFirmware = true;
+  hardware.bluetooth.enable = true;
+
+  services.xserver.videoDrivers = ["amdgpu" ];
+  services.pulseaudio.enable = false;
+  services.pipewire = {
+    enable = true;
+    alsa.enable = true;
+    pulse.enable = true;
+    jack.enable = true;
+  };
+  services.blueman.enable = true;
+
   networking.hostName = "nix-pc";
   networking.networkmanager.enable = true;
   networking.firewall = {
