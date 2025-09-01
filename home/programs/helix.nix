@@ -3,9 +3,18 @@
 {
   programs.helix = {
     enable = true;
+    defaultEditor = true;
     package = pkgs.helix;
     settings = {
       editor = {
+        color-modes = true;
+        cursorline = true;
+        bufferline = "multiple";
+        soft-wrap.enable = true;
+        auto-save = {
+          focus-lost = true;
+          after-delay.enable = true;
+        };
         cursor-shape = {
           normal = "block";
           insert = "bar";
