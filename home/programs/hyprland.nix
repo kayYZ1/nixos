@@ -4,7 +4,6 @@
   wayland.windowManager.hyprland = {
     enable = true;
     settings = {
-      # Monitor configuration - 1920x1080@60Hz with no scaling
       monitor = "eDP-1,1920x1080@60,0x0,1";
       exec-once = [
         "waybar"
@@ -90,9 +89,17 @@
         "$mainMod SHIFT, 3, movetoworkspace, 3"
         "$mainMod SHIFT, 4, movetoworkspace, 4"
         "$mainMod SHIFT, 5, movetoworkspace, 5"
+
+        # Brightness
+        ",XF86MonBrightnessUp,exec,brightnessctl s +10%"
+        ",XF86MonBrightnessDown,exec,brightnessctl s 10%-"
+
+        # Volume
+        ",XF86AudioRaiseVolume,exec,pamixer --increase 5"
+        ",XF86AudioLowerVolume,exec,pamixer --decrease 5"
+        ",XF86AudioMute,exec,pamixer --toggle-mute"
       ];
 
-      # Mouse bindings
       bindm = [
         "$mainMod, mouse:272, movewindow"
         "$mainMod, mouse:273, resizewindow"

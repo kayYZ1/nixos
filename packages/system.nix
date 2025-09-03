@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ pkgs, ... }:
 
 {
   environment.systemPackages = with pkgs; [
@@ -33,6 +33,9 @@
 
 	killall
 	pstree
+
+  wev
+  pamixer
 	
 	man-pages
 	man-pages-posix
