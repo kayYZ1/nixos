@@ -6,7 +6,6 @@
 	./home/programs/waybar.nix
 	./home/programs/git.nix
 	./home/programs/nu.nix
-	./home/programs/nvim.nix
 	./home/programs/helix.nix
   ];
 
