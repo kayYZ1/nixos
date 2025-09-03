@@ -32,7 +32,8 @@
 
 	environment.systemPackages = with pkgs; [
 		waybar
-		wofi
+		swaybg
+		rofi
 		mako
 		grim
 		slurp
@@ -40,6 +41,7 @@
 
 		nautilus
 
+		wev
 		pavucontrol
 		brightnessctl
 	];
